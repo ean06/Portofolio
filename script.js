@@ -119,21 +119,26 @@
     sections.forEach((s) => obs.observe(s));
   }
 
-  /* ---------- 4b. MOBILE MENU (hamburger) ---------- */
+  /* ---------- 4b. MOBILE MENU (hamburger → sidebar drawer) ---------- */
   function initMobileMenu() {
     const burger = document.getElementById('navBurger');
     const menu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('mobileOverlay');
+    const closeBtn = document.getElementById('mobileMenuClose');
+    const mobileTheme = document.getElementById('mobileThemeToggle');
     if (!burger || !menu) return;
 
     function closeMenu() {
       burger.classList.remove('open');
       menu.classList.remove('open');
+      if (overlay) { overlay.classList.remove('open'); overlay.style.display = ''; }
       burger.setAttribute('aria-expanded', 'false');
       document.body.classList.remove('menu-open');
     }
     function openMenu() {
       burger.classList.add('open');
       menu.classList.add('open');
+      if (overlay) { overlay.style.display = 'block'; requestAnimationFrame(() => overlay.classList.add('open')); }
       burger.setAttribute('aria-expanded', 'true');
       document.body.classList.add('menu-open');
     }
@@ -141,16 +146,31 @@
     burger.addEventListener('click', () => {
       menu.classList.contains('open') ? closeMenu() : openMenu();
     });
+    if (closeBtn) closeBtn.addEventListener('click', closeMenu);
+    if (overlay) overlay.addEventListener('click', closeMenu);
+
     menu.querySelectorAll('a').forEach((a) =>
       a.addEventListener('click', closeMenu)
     );
     window.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') closeMenu();
     });
-    // Tutup otomatis kalau layar dilebarkan kembali ke desktop
     window.addEventListener('resize', () => {
       if (window.innerWidth > 1024) closeMenu();
     });
+
+    // Mobile theme toggle — sync dengan tombol utama
+    if (mobileTheme) {
+      mobileTheme.addEventListener('click', () => {
+        document.documentElement.classList.toggle('light-mode');
+        try {
+          localStorage.setItem(
+            'site-theme',
+            document.documentElement.classList.contains('light-mode') ? 'light' : 'dark'
+          );
+        } catch (e) { /* ignore */ }
+      });
+    }
   }
 
   /* ---------- 5. REVEAL ON SCROLL (fade-up otomatis) ---------- */
@@ -393,28 +413,68 @@
   }
 
   /* ---------- 10. TILT CARD 3D ---------- */
-  function initTiltCards() {
-    if (prefersReducedMotion) return;
-    if (window.matchMedia('(pointer: coarse)').matches) return;
+function initTiltCards() {
+  if (prefersReducedMotion) return;
+  if (window.matchMedia('(pointer: coarse)').matches) return;
 
-    const cards = document.querySelectorAll('.service-card, .portfolio-card');
-    cards.forEach((card) => {
-      const maxTilt = 7;
+  const cards = document.querySelectorAll(
+    '.service-card, .portfolio-card'
+  );
 
-      card.addEventListener('mousemove', (e) => {
-        const rect = card.getBoundingClientRect();
-        const px = (e.clientX - rect.left) / rect.width;
-        const py = (e.clientY - rect.top) / rect.height;
-        const rotateY = (px - 0.5) * maxTilt * 2;
-        const rotateX = (0.5 - py) * maxTilt * 2;
-        card.style.transform = `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = '';
-      });
+  cards.forEach((card) => {
+    const maxTilt = 10;
+
+    let mouseX = 0;
+    let mouseY = 0;
+    let currentX = 0;
+    let currentY = 0;
+
+    let raf = null;
+
+    function update() {
+      currentX += (mouseX - currentX) * 0.18;
+      currentY += (mouseY - currentY) * 0.18;
+
+      const rotateY = currentX * maxTilt;
+      const rotateX = -currentY * maxTilt;
+
+      card.style.transform =
+        `perspective(1200px)
+         rotateX(${rotateX}deg)
+         rotateY(${rotateY}deg)
+         translate3d(0,-4px,0)`;
+
+      raf = requestAnimationFrame(update);
+    }
+
+    card.addEventListener('mouseenter', () => {
+      if (!raf) raf = requestAnimationFrame(update);
     });
-  }
 
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+
+      mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+      mouseY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+    });
+
+    card.addEventListener('mouseleave', () => {
+      cancelAnimationFrame(raf);
+      raf = null;
+
+      card.style.transition =
+        'transform 0.35s cubic-bezier(.16,.84,.44,1)';
+
+      card.style.transform =
+        'perspective(1200px) rotateX(0deg) rotateY(0deg) translate3d(0,0,0)';
+
+      setTimeout(() => {
+        card.style.transition =
+          'box-shadow .25s ease, border-color .25s ease';
+      }, 350);
+    });
+  });
+}
   /* ---------- 11. LANGUAGE BARS ---------- */
   function initLanguageBars() {
     const bars = document.querySelectorAll('.bar-fill');
@@ -450,8 +510,8 @@
   /* ---------- 12. NEURAL NETWORK (canvas "menari" di background) ---------- */
   function initNeuralNetwork() {
     const isMobile = window.innerWidth < 700;
-    const density = isMobile ? 20000 : 13000; // px² per node — makin besar, makin jarang
-    const maxDist = isMobile ? 100 : 145;
+    const density = isMobile ? 35000 : 22000;
+    const maxDist = isMobile ? 80 : 110;
     const instances = [];
 
     document.querySelectorAll('section').forEach((section) => {
@@ -506,9 +566,9 @@
               dy = a.y - b.y;
             const dist = Math.sqrt(dx * dx + dy * dy);
             if (dist < maxDist) {
-              const alpha = (1 - dist / maxDist) * 0.16;
+              const alpha = (1 - dist / maxDist) * 0.32;
               ctx.strokeStyle = `rgba(34, 211, 238, ${alpha})`;
-              ctx.lineWidth = 1;
+              ctx.lineWidth = 1.1;
               ctx.beginPath();
               ctx.moveTo(a.x, a.y);
               ctx.lineTo(b.x, b.y);
@@ -518,10 +578,14 @@
         }
 
         nodes.forEach((n) => {
+          ctx.save();
+          ctx.shadowColor = 'rgba(34, 211, 238, 0.95)';
+          ctx.shadowBlur = 8;
           ctx.beginPath();
-          ctx.arc(n.x, n.y, 1.7, 0, Math.PI * 2);
-          ctx.fillStyle = 'rgba(34, 211, 238, 0.5)';
+          ctx.arc(n.x, n.y, 2, 0, Math.PI * 2);
+          ctx.fillStyle = 'rgba(165, 243, 252, 0.9)';
           ctx.fill();
+          ctx.restore();
         });
       }
 
