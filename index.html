@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Raihan Fadilah — Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=JetBrains+Mono:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">Raihan Fadilah</div>
+    <div class="nav-pill">
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Ganti tema gelap/terang">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="4" />
+          <path
+            d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" />
+        </svg>
+      </button>
+      <a href="#contact" class="nav-cta">Get in touch</a>
+      <button class="nav-burger" id="navBurger" aria-label="Buka menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-menu-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+    </ul>
+    <a href="#contact" class="mobile-menu-cta">Get in touch</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="home">
+
+    <!-- Block 1: foto + headline -->
+    <div class="intro-grid">
+      <div class="intro-photo fade-up">
+        <div class="intro-photo-wrap">
+          <img src="assets/my.jpg" alt="Raihan Fadilah" class="intro-img">
+        </div>
+        <div class="intro-socials">
+          <a href="https://www.instagram.com" target="_blank" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <rect x="2" y="2" width="20" height="20" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a href="https://github.com" target="_blank" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2C6.48 2 2 6.58 2 12.26c0 4.53 2.87 8.37 6.84 9.72.5.09.68-.22.68-.49v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.46-1.19-1.12-1.5-1.12-1.5-.91-.64.07-.62.07-.62 1.01.07 1.54 1.06 1.54 1.06.9 1.57 2.36 1.12 2.93.85.09-.66.35-1.12.64-1.37-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.72 0 0 .84-.27 2.75 1.05a9.4 9.4 0 0 1 2.5-.34c.85 0 1.7.12 2.5.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.42.2 2.46.1 2.72.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.59.69.49A10.27 10.27 0 0 0 22 12.26C22 6.58 17.52 2 12 2z" />
+            </svg>
+          </a>
+          <a href="https://linkedin.com/in/raihan-fadilah" target="_blank" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.37V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.43v6.31zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.27V1.73C24 .77 23.2 0 22.22 0z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="intro-text">
+        <div class="intro-role fade-up fade-up-d1"></div>
+        <h1 class="intro-heading fade-up fade-up-d1">Specializing in Web &amp; Mobile Development</h1>
+        <p class="fade-up fade-up-d2">I'm Raihan, a Computer Science student focused on building responsive,
+          production-ready websites and applications for real-world use. I'm currently pursuing a career as a Frontend /
+          Web &amp; Mobile Developer.</p>
+        <p class="fade-up fade-up-d2">Through this platform, I share my work, document my learning process, and offer
+          collaboration for those looking to build modern, user-centered digital products.</p>
+        <a href="#contact" class="hero-btn fade-up fade-up-d3">
+          Let's Discuss
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Block 2: "I Build Almost Anything" + code window -->
+    <div class="build-grid">
+      <div class="build-text">
+        <h2 class="fade-up">I Build Almost Anything in Web &amp; Mobile</h2>
+        <p class="fade-up fade-up-d1">I'm comfortable building across almost every layer of the stack — from
+          pixel-perfect interfaces to the backend APIs and databases that power them.</p>
+        <p class="fade-up fade-up-d2">My curiosity consistently drives me to learn new frameworks, tools, and patterns
+          with every project I take on, translated into practical, production-ready solutions.</p>
+      </div>
+
+      <div class="build-visual fade-up fade-up-d1">
+        <div class="code-window">
+          <div class="code-header">
+            <div class="traffic-lights"><span></span><span></span><span></span></div>
+            <div class="code-tabs">
+              <button class="code-tab active" data-tab="0">App.jsx</button>
+              <button class="code-tab" data-tab="1">api.js</button>
+              <button class="code-tab" data-tab="2">style.css</button>
+            </div>
+          </div>
+          <div class="code-body">
+            <pre class="code-pane active" data-pane="0"><code><span class="tok-kw">import</span> { useState } <span class="tok-kw">from</span> <span class="tok-str">'react'</span><span class="tok-punc">;</span>
+
+<span class="tok-kw">export default function</span> <span class="tok-fn">App</span>() {
+  <span class="tok-kw">const</span> [user, setUser] <span class="tok-punc">=</span> <span class="tok-fn">useState</span>(<span class="tok-kw">null</span>)<span class="tok-punc">;</span>
+
+  <span class="tok-kw">return</span> (
+    <span class="tok-punc">&lt;</span><span class="tok-tag">main</span> <span class="tok-attr">className</span><span class="tok-punc">=</span><span class="tok-str">"app"</span><span class="tok-punc">&gt;</span>
+      <span class="tok-punc">&lt;</span><span class="tok-tag">Navbar</span> <span class="tok-attr">user</span><span class="tok-punc">=</span>{user} <span class="tok-punc">/&gt;</span>
+      <span class="tok-punc">&lt;</span><span class="tok-tag">Hero</span> <span class="tok-punc">/&gt;</span>
+    <span class="tok-punc">&lt;/</span><span class="tok-tag">main</span><span class="tok-punc">&gt;</span>
+  )<span class="tok-punc">;</span>
+}<span class="code-cursor"></span></code></pre>
+
+            <pre class="code-pane"
+              data-pane="1"><code><span class="tok-kw">const</span> express <span class="tok-punc">=</span> <span class="tok-fn">require</span>(<span class="tok-str">'express'</span>)<span class="tok-punc">;</span>
+<span class="tok-kw">const</span> router <span class="tok-punc">=</span> express.<span class="tok-fn">Router</span>()<span class="tok-punc">;</span>
+
+router.<span class="tok-fn">get</span>(<span class="tok-str">'/api/projects'</span>, <span class="tok-kw">async</span> (req, res) <span class="tok-punc">=&gt;</span> {
+  <span class="tok-kw">const</span> data <span class="tok-punc">=</span> <span class="tok-kw">await</span> Project.<span class="tok-fn">find</span>()<span class="tok-punc">;</span>
+  res.<span class="tok-fn">json</span>({ <span class="tok-attr">ok</span><span class="tok-punc">:</span> <span class="tok-kw">true</span>, data })<span class="tok-punc">;</span>
+})<span class="tok-punc">;</span>
+
+<span class="tok-kw">module</span>.exports <span class="tok-punc">=</span> router<span class="tok-punc">;</span><span class="code-cursor"></span></code></pre>
+
+            <pre class="code-pane" data-pane="2"><code><span class="tok-punc">.</span><span class="tok-fn">hero-btn</span> {
+  <span class="tok-attr">display</span><span class="tok-punc">:</span> <span class="tok-plain">inline-flex</span><span class="tok-punc">;</span>
+  <span class="tok-attr">background</span><span class="tok-punc">:</span> <span class="tok-plain">var</span>(<span class="tok-plain">--cyan</span>)<span class="tok-punc">;</span>
+  <span class="tok-attr">border-radius</span><span class="tok-punc">:</span> <span class="tok-num">50px</span><span class="tok-punc">;</span>
+  <span class="tok-attr">transition</span><span class="tok-punc">:</span> <span class="tok-plain">transform .2s</span><span class="tok-punc">;</span>
+}
+
+<span class="tok-punc">.</span><span class="tok-fn">hero-btn</span><span class="tok-punc">:</span><span class="tok-fn">hover</span> {
+  <span class="tok-attr">transform</span><span class="tok-punc">:</span> <span class="tok-fn">translateY</span>(<span class="tok-num">-2px</span>)<span class="tok-punc">;</span>
+}<span class="code-cursor"></span></code></pre>
+          </div>
+        </div>
+        <div class="code-dots">
+          <button class="dot active" data-dot="0" aria-label="App.jsx"></button>
+          <button class="dot" data-dot="1" aria-label="api.js"></button>
+          <button class="dot" data-dot="2" aria-label="style.css"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-img-wrap">
+      <div class="photo-placeholder" style="height:100%">RF</div>
+      <div class="about-skills">
+        <h4>Skills</h4>
+        <div class="skill-icons">
+          <span class="skill-chip">HTML5</span>
+          <span class="skill-chip">CSS3</span>
+          <span class="skill-chip">Figma</span>
+          <span class="skill-chip">PHP</span>
+          <span class="skill-chip">Laravel</span>
+          <span class="skill-chip">React</span>
+          <span class="skill-chip">Tailwind</span>
+          <span class="skill-chip">MySQL</span>
+          <span class="skill-chip">React Native</span>
+          <span class="skill-chip">Golang</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-content">
+      <div class="section-label">About Me</div>
+      <h2 class="section-title">Building with Purpose,<br>Coding with Passion</h2>
+
+      <div class="about-meta">
+        <div class="meta-item">
+          <div class="meta-label">Education</div>
+          <div class="meta-val">📍 2021–2024</div>
+          <div style="font-size:.82rem;color:var(--text-soft);margin-top:2px">SMK Bina Informatika<br>Major: RPL</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Current</div>
+          <div class="meta-val">📍 2024–Now</div>
+          <div style="font-size:.82rem;color:var(--text-soft);margin-top:2px">Telkom University<br>Informatics
+            Engineering</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Phone</div>
+          <div class="meta-val">+62-813-1778-7149</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-label">Location</div>
+          <div class="meta-val">Tangerang Selatan, Banten</div>
+        </div>
+      </div>
+
+      <p>Hi, I'm Raihan Fadilah, a student at Telkom University majoring in Informatics Engineering. I have experience
+        in website development and major programming languages such as HTML, CSS, and PHP. I am also proficient in using
+        the Laravel framework and Tailwind CSS for responsive and modern designs.</p>
+      <p>I have a strong understanding of MySQL database management. I can help you create various types of websites
+        such as company profiles, inventories, e-commerce, and more — with a combination of technical skills and design
+        creativity.</p>
+
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="services-header">
+      <div class="section-label">What I Offer</div>
+      <h2 class="section-title">Services</h2>
+      <p>I provide a range of digital development services focused on performance, user experience, and system
+        scalability. With a combination of design and engineering skills, I'm ready to help build products from the idea
+        stage to implementation.</p>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="3" y="3" width="18" height="18" rx="3" />
+            <path d="M9 9h6M9 12h6M9 15h4" />
+          </svg>
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>I design interfaces that are not only visually appealing, but also intuitive and easy to use. My primary
+          focus is creating efficient and enjoyable user experiences through a user-centered design approach.</p>
+        <div class="service-tags">
+          <span class="tag">Wireframing & prototyping</span>
+          <span class="tag">Design system</span>
+          <span class="tag">User flow & usability</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <polyline points="16 18 22 12 16 6" />
+            <polyline points="8 6 2 12 8 18" />
+          </svg>
+        </div>
+        <h3>Frontend Website Development</h3>
+        <p>I build responsive, fast, and modern websites using the latest technologies, ensuring compatibility across
+          devices.</p>
+        <div class="service-tags">
+          <span class="tag">HTML/CSS/JS</span>
+          <span class="tag">Tailwind CSS</span>
+          <span class="tag">React JS</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <rect x="5" y="2" width="14" height="20" rx="3" />
+            <line x1="9" y1="7" x2="15" y2="7" />
+            <line x1="9" y1="11" x2="15" y2="11" />
+          </svg>
+        </div>
+        <h3>Frontend Mobile Development</h3>
+        <p>I develop mobile applications with high performance and consistent appearance across multiple platforms.</p>
+        <div class="service-tags">
+          <span class="tag">React Native</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="services-row2">
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <path d="M5 12V6a2 2 0 012-2h10a2 2 0 012 2v6" />
+            <path d="M3 12h18v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8z" />
+          </svg>
+        </div>
+        <h3>Backend Website Development</h3>
+        <p>I design and build robust, secure, and scalable backend systems to support application needs.</p>
+        <div class="service-tags">
+          <span class="tag">PHP</span>
+          <span class="tag">Laravel</span>
+          <span class="tag">Golang</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+            <ellipse cx="12" cy="5" rx="9" ry="3" />
+            <path d="M3 5v14a9 3 0 0018 0V5" />
+            <path d="M3 12a9 3 0 0018 0" />
+          </svg>
+        </div>
+        <h3>Database Management (MySQL)</h3>
+        <p>I manage and design efficient database structures to ensure optimal performance and data integrity.</p>
+        <div class="service-tags">
+          <span class="tag">Database design</span>
+          <span class="tag">Query optimization</span>
+          <span class="tag">Data management</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="exp-header">
+      <div class="section-label">Career Timeline</div>
+      <h2 class="section-title">Experience</h2>
+    </div>
+
+    <div class="exp-timeline">
+      <div class="exp-item">
+        <div class="exp-year">2024</div>
+        <div class="exp-content">
+          <h3>Front-end Mobile</h3>
+          <div class="exp-company">PT Satrio Gemilang Perkasa</div>
+          <p>I am a front-end mobile developer involved in developing a loan origination system application for mobile
+            devices using React Native. This application is designed to help bank officers improve efficiency and speed
+            in the loan disbursement process, as well as to make it easier for prospective customers to view financing
+            simulations before applying for a loan.</p>
+        </div>
+        <div class="exp-photos">
+          <img src="assets/sgp-1.jpg" alt="PT Satrio Gemilang Perkasa Team">
+          <img src="assets/sgp-2.jpeg" alt="PT Satrio Gemilang Perkasa Workspace">
+        </div>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-year">2023</div>
+        <div class="exp-content">
+          <h3>Full Stack Developer</h3>
+          <div class="exp-company">PT Fahove Teknologi Indonesia</div>
+          <p>I had an internship as a full-stack website developer at PT Fahove. There, I was involved in creating
+            various websites, including inventory counts, company profiles, and e-commerce websites. Every website I
+            created was designed to be responsive, adapting to both desktop and mobile devices. In my development, I
+            used HTML, CSS, and the Tailwind CSS framework for modern design. On the backend, I implemented PHP for
+            application logic and a MySQL database for efficient data management.</p>
+        </div>
+        <div class="exp-photos">
+          <img src="assets/fahove-1.jpg" alt="PT Fahove Teknologi Indonesia Office">
+          <img src="assets/fahove-2.jpg" alt="PT Fahove Teknologi Indonesia Team">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="portfolio-header">
+      <div class="section-label">My Work</div>
+      <h2 class="section-title">Portfolio</h2>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <div class="portfolio-thumb">
+          <span class="portfolio-thumb-label">UI/UX</span>
+          <span class="portfolio-badge">6 Projects</span>
+        </div>
+        <div class="portfolio-info">
+          <h3>UI/UX Design</h3>
+          <p>Food apps, e-commerce, and product landing pages — crafted with a user-centered approach.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg,#0e2a30 0%,#123842 100%)">
+          <span class="portfolio-thumb-label">Mobile</span>
+          <span class="portfolio-badge">5 Projects</span>
+        </div>
+        <div class="portfolio-info">
+          <h3>Frontend Mobile</h3>
+          <p>Hospital management, IoT dashboards, and loan origination apps built with React Native.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg,#0a2228 0%,#103138 100%)">
+          <span class="portfolio-thumb-label">Web</span>
+          <span class="portfolio-badge">6 Projects</span>
+        </div>
+        <div class="portfolio-info">
+          <h3>Frontend Website</h3>
+          <p>Company profiles, e-commerce storefronts, and SaaS dashboards built for speed and responsiveness.</p>
+        </div>
+      </div>
+
+      <div class="portfolio-card">
+        <div class="portfolio-thumb" style="background: linear-gradient(135deg,#123842 0%,#0e2a30 100%)">
+          <span class="portfolio-thumb-label" style="color:rgba(34,211,238,0.18)">Backend</span>
+          <span class="portfolio-badge">6 Projects</span>
+        </div>
+        <div class="portfolio-info">
+          <h3>Backend Developer</h3>
+          <p>Scalable APIs and database architectures supporting inventory, finance, and healthcare systems.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-label">Let's Work Together</div>
+    <h2 class="section-title">Have a project in mind?</h2>
+    <p>I'm available for freelance projects, internships, and full-time opportunities. Let's build something great
+      together.</p>
+    <div class="contact-actions">
+      <a href="mailto:raihanfadilah0406@gmail.com" class="btn-white">Send Email</a>
+      <a href="https://wa.me/6281317787149" class="btn-outline-white" target="_blank">WhatsApp Me</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="logo">Raihan Fadilah</div>
+    <div>© 2025 Raihan Fadilah. All rights reserved.</div>
+    <div>raihanfadilah0406@gmail.com</div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+
+</html>
