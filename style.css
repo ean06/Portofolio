@@ -1,44 +1,44 @@
 :root {
   /* ===== DARK THEME (default) ===== */
-  --bg: #090d15;
-  --bg-soft: #0c111c;
-  --bg-elevated: #0e1422;
-  --panel: #111827;
-  --panel-soft: #161e2e;
-  --border: rgba(255, 255, 255, 0.08);
+  --bg: #0a0a0a;
+  --bg-soft: #111111;
+  --bg-elevated: #181818;
+  --panel: #1c1c1c;
+  --panel-soft: #222222;
+  --border: rgba(255, 255, 255, 0.09);
   --border-soft: rgba(255, 255, 255, 0.06);
-  --text: #eef1f7;
-  --text-soft: #9aa7bd;
-  --text-faint: #5b6478;
+  --text: #f0f0f0;
+  --text-soft: #a0a0a0;
+  --text-faint: #555555;
   --white: #ffffff;
-  --cyan: #22d3ee;
-  --cyan-2: #67e8f9;
-  --cyan-dim: rgba(34, 211, 238, 0.12);
-  --cyan-glow: rgba(34, 211, 238, 0.48);
-  --cyan-text: #0a1118;
+  --cyan: #c0c0c0;
+  --cyan-2: #e0e0e0;
+  --cyan-dim: rgba(192, 192, 192, 0.12);
+  --cyan-glow: rgba(192, 192, 192, 0.35);
+  --cyan-text: #0a0a0a;
   --radius: 20px;
-  --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.35);
+  --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.55);
 }
 
 html.light-mode {
-  /* ===== LIGHT THEME ===== */
-  --bg: #f3f6fb;
+  /* ===== LIGHT THEME — Putih & Biru Muda ===== */
+  --bg: #f0f6ff;
   --bg-soft: #ffffff;
-  --bg-elevated: rgba(255, 255, 255, 0.85);
+  --bg-elevated: rgba(255, 255, 255, 0.9);
   --panel: #ffffff;
-  --panel-soft: #eef2f8;
-  --border: rgba(15, 23, 42, 0.08);
-  --border-soft: rgba(15, 23, 42, 0.06);
-  --text: #0f172a;
-  --text-soft: #4b5567;
-  --text-faint: #94a3b8;
+  --panel-soft: #e8f0fe;
+  --border: rgba(59, 130, 246, 0.15);
+  --border-soft: rgba(59, 130, 246, 0.08);
+  --text: #0d1b3e;
+  --text-soft: #3b5280;
+  --text-faint: #93aed4;
   --white: #ffffff;
-  --cyan: #0891b2;
-  --cyan-2: #0e7490;
-  --cyan-dim: rgba(8, 145, 178, 0.08);
-  --cyan-glow: rgba(8, 145, 178, 0.32);
+  --cyan: #3b82f6;
+  --cyan-2: #60a5fa;
+  --cyan-dim: rgba(59, 130, 246, 0.1);
+  --cyan-glow: rgba(59, 130, 246, 0.35);
   --cyan-text: #ffffff;
-  --shadow-soft: 0 20px 50px rgba(15, 23, 42, 0.08);
+  --shadow-soft: 0 20px 50px rgba(59, 130, 246, 0.1);
 }
 
 * {
@@ -288,7 +288,7 @@ html.light-mode .mobile-menu {
   transform: translateY(0);
 }
 
-nav.nav-scrolled ~ .mobile-menu {
+nav.nav-scrolled~.mobile-menu {
   top: 58px;
 }
 
@@ -507,6 +507,7 @@ body.menu-open {
 }
 
 @keyframes bounce {
+
   0%,
   20%,
   50%,
@@ -1632,7 +1633,7 @@ section {
   isolation: isolate;
 }
 
-section > *:not(.bg-orbs) {
+section>*:not(.bg-orbs) {
   position: relative;
   z-index: 1;
 }
@@ -1657,6 +1658,7 @@ canvas.bg-orbs {
 }
 
 @keyframes floatY {
+
   0%,
   100% {
     transform: translateY(0);
@@ -1695,6 +1697,7 @@ canvas.bg-orbs {
 }
 
 @keyframes caretBlink {
+
   0%,
   50% {
     opacity: 1;
@@ -1751,11 +1754,9 @@ html.light-mode nav.nav-scrolled {
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    var(--cyan-glow) 0%,
-    rgba(34, 211, 238, 0) 70%
-  );
+  background: radial-gradient(circle,
+      var(--cyan-glow) 0%,
+      rgba(34, 211, 238, 0) 70%);
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 2;
@@ -1806,12 +1807,10 @@ html.light-mode nav.nav-scrolled {
   left: -150%;
   width: 60%;
   height: 100%;
-  background: linear-gradient(
-    115deg,
-    transparent 0%,
-    rgba(34, 211, 238, 0.18) 50%,
-    transparent 100%
-  );
+  background: linear-gradient(115deg,
+      transparent 0%,
+      rgba(34, 211, 238, 0.18) 50%,
+      transparent 100%);
   transform: skewX(-20deg);
   transition: left 0.65s ease;
   pointer-events: none;
@@ -1861,6 +1860,7 @@ button:focus-visible {
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -1886,6 +1886,7 @@ button:focus-visible {
 }
 
 @media (hover: none) {
+
   .service-card:hover,
   .portfolio-card:hover {
     transform: none;
@@ -1925,6 +1926,7 @@ button:focus-visible {
 }
 
 media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
@@ -1950,6 +1952,7 @@ media (prefers-reduced-motion: reduce) {
 }
 
 @media (hover: none) {
+
   .service-card:hover,
   .portfolio-card:hover {
     transform: none;

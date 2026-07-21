@@ -1,0 +1,88 @@
+# ========== COLOR CODE ========== # 
+
+========== Dark Blue ==========
+/* ===== DARK THEME (default) ===== */
+  --bg: #090d15;
+  --bg-soft: #0c111c;
+  --bg-elevated: #0e1422;
+  --panel: #111827;
+  --panel-soft: #161e2e;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-soft: rgba(255, 255, 255, 0.06);
+  --text: #eef1f7;
+  --text-soft: #9aa7bd;
+  --text-faint: #5b6478;
+  --white: #ffffff;
+  --cyan: #22d3ee;
+  --cyan-2: #67e8f9;
+  --cyan-dim: rgba(34, 211, 238, 0.12);
+  --cyan-glow: rgba(34, 211, 238, 0.48);
+  --cyan-text: #0a1118;
+  --radius: 20px;
+  --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+html.light-mode {
+  /* ===== LIGHT THEME ===== */
+  --bg: #f3f6fb;
+  --bg-soft: #ffffff;
+  --bg-elevated: rgba(255, 255, 255, 0.85);
+  --panel: #ffffff;
+  --panel-soft: #eef2f8;
+  --border: rgba(15, 23, 42, 0.08);
+  --border-soft: rgba(15, 23, 42, 0.06);
+  --text: #0f172a;
+  --text-soft: #4b5567;
+  --text-faint: #94a3b8;
+  --white: #ffffff;
+  --cyan: #0891b2;
+  --cyan-2: #0e7490;
+  --cyan-dim: rgba(8, 145, 178, 0.08);
+  --cyan-glow: rgba(8, 145, 178, 0.32);
+  --cyan-text: #ffffff;
+  --shadow-soft: 0 20px 50px rgba(15, 23, 42, 0.08);
+} 
+
+
+========== Dark Grey ==========
+  /* ===== DARK THEME (default) — Hitam & Abu-abu ===== */
+  --bg: #0a0a0a;
+  --bg-soft: #111111;
+  --bg-elevated: #181818;
+  --panel: #1c1c1c;
+  --panel-soft: #222222;
+  --border: rgba(255, 255, 255, 0.09);
+  --border-soft: rgba(255, 255, 255, 0.06);
+  --text: #f0f0f0;
+  --text-soft: #a0a0a0;
+  --text-faint: #555555;
+  --white: #ffffff;
+  --cyan: #c0c0c0;
+  --cyan-2: #e0e0e0;
+  --cyan-dim: rgba(192, 192, 192, 0.12);
+  --cyan-glow: rgba(192, 192, 192, 0.35);
+  --cyan-text: #0a0a0a;
+  --radius: 20px;
+  --shadow-soft: 0 20px 50px rgba(0, 0, 0, 0.55);
+}
+
+html.light-mode {
+  /* ===== LIGHT THEME — Putih & Biru Muda ===== */
+  --bg: #f0f6ff;
+  --bg-soft: #ffffff;
+  --bg-elevated: rgba(255, 255, 255, 0.9);
+  --panel: #ffffff;
+  --panel-soft: #e8f0fe;
+  --border: rgba(59, 130, 246, 0.15);
+  --border-soft: rgba(59, 130, 246, 0.08);
+  --text: #0d1b3e;
+  --text-soft: #3b5280;
+  --text-faint: #93aed4;
+  --white: #ffffff;
+  --cyan: #3b82f6;
+  --cyan-2: #60a5fa;
+  --cyan-dim: rgba(59, 130, 246, 0.1);
+  --cyan-glow: rgba(59, 130, 246, 0.35);
+  --cyan-text: #ffffff;
+  --shadow-soft: 0 20px 50px rgba(59, 130, 246, 0.1);
+}
