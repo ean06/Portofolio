@@ -643,6 +643,64 @@ function initTiltCards() {
     requestAnimationFrame(loop);
   }
 
+  /* ---------- 13. EXPERIENCE PHOTO MODAL (CODE WINDOW STYLE) ---------- */
+  function initExpPhotoModal() {
+    const overlay = document.getElementById('imgModalOverlay');
+    const closeBtn = document.getElementById('imgModalClose');
+    const modalImg = document.getElementById('modalImg');
+    const modalFileName = document.getElementById('modalFileName');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalCompany = document.getElementById('modalCompany');
+    const modalYear = document.getElementById('modalYear');
+    const modalCaption = document.getElementById('modalCaption');
+
+    if (!overlay || !modalImg) return;
+
+    function openModal(imgEl) {
+      const expItem = imgEl.closest('.exp-item');
+      const year = expItem ? expItem.querySelector('.exp-year')?.textContent : '';
+      const title = expItem ? expItem.querySelector('.exp-content h3')?.textContent : '';
+      const company = expItem ? expItem.querySelector('.exp-company')?.textContent : '';
+      const altText = imgEl.alt || title || 'Experience Photo';
+      const imgSrc = imgEl.src;
+
+      const filename = imgSrc.substring(imgSrc.lastIndexOf('/') + 1);
+
+      modalImg.src = imgSrc;
+      modalImg.alt = altText;
+      if (modalFileName) modalFileName.textContent = filename || 'preview.jpg';
+      if (modalTitle) modalTitle.textContent = title;
+      if (modalCompany) modalCompany.textContent = company;
+      if (modalYear) modalYear.textContent = year;
+      if (modalCaption) modalCaption.textContent = altText;
+
+      overlay.classList.add('active');
+      overlay.setAttribute('aria-hidden', 'false');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      overlay.classList.remove('active');
+      overlay.setAttribute('aria-hidden', 'true');
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.exp-photos img').forEach((img) => {
+      img.addEventListener('click', () => openModal(img));
+    });
+
+    closeBtn?.addEventListener('click', closeModal);
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) closeModal();
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && overlay.classList.contains('active')) {
+        closeModal();
+      }
+    });
+  }
+
   /* ---------- INIT ---------- */
   function init() {
     initThemeToggle();
@@ -655,6 +713,7 @@ function initTiltCards() {
     initCodeShowcase();
     initLanguageBars();
     initCursorGlow();
+    initExpPhotoModal();
     onIdle(() => {
       initMagnetic();
       initTiltCards();

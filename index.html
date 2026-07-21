@@ -97,12 +97,54 @@
         </a>
       </div>
     </div>
+  </section>
 
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="about-layout">
+      <!-- Left Column: Photo Card -->
+      <div class="about-photo-col">
+        <div class="about-photo-card">
+          <img src="assets/my.jpg" alt="Raihan Fadilah" class="about-photo-img">
+        </div>
+      </div>
+
+      <!-- Right Column: Content -->
+      <div class="about-content-col">
+        <div class="about-subtag">CURRENT BACKGROUND</div>
+        <h2 class="about-main-heading">Specializing in Frontend &amp; Web Development</h2>
+
+        <div class="about-bio-paragraphs">
+          <p>I'm <strong>Raihan Fadilah</strong>, a Computer Science student at Telkom University, focused on creating and developing production quality web & mobile applications for real world solutions.</p>
+          <p>I bring strong technical skills in major web technologies, modern frameworks like Laravel, React, and Tailwind CSS, as well as database management with MySQL to translate design ideas into seamless user experiences.</p>
+        </div>
+
+        <div class="about-skills-new">
+          <h4>SKILLS &amp; ARSENAL</h4>
+          <div class="skill-chips-new">
+            <span class="skill-chip">HTML5</span>
+            <span class="skill-chip">CSS3</span>
+            <span class="skill-chip">Figma</span>
+            <span class="skill-chip">PHP</span>
+            <span class="skill-chip">Laravel</span>
+            <span class="skill-chip">React</span>
+            <span class="skill-chip">Tailwind</span>
+            <span class="skill-chip">MySQL</span>
+            <span class="skill-chip">React Native</span>
+            <span class="skill-chip">Golang</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BUILD -->
+  <section class="build-section">
     <div class="build-grid">
       <div class="build-text">
         <h2 class="fade-up">I Build Almost Anything in Web &amp; Mobile</h2>
-        <p class="fade-up fade-up-d1">I'm comfortable building across almost every layer of the stack — from
-          pixel-perfect interfaces to the backend APIs and databases that power them.</p>
+        <p class="fade-up fade-up-d1">I'm comfortable building across almost every layer of the stack from
+          pixel perfect interfaces to the backend APIs and databases that power them.</p>
         <p class="fade-up fade-up-d2">My curiosity consistently drives me to learn new frameworks, tools, and patterns
           with every project I take on, translated into practical, production-ready solutions.</p>
       </div>
@@ -158,73 +200,6 @@ router.<span class="tok-fn">get</span>(<span class="tok-str">'/api/projects'</sp
           <button class="dot active" data-dot="0" aria-label="App.jsx"></button>
           <button class="dot" data-dot="1" aria-label="api.js"></button>
           <button class="dot" data-dot="2" aria-label="style.css"></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="about-grid-new">
-      <!-- Left Column: Title and Metadata -->
-      <div class="about-left">
-        <div class="about-section-label">01 / ABOUT</div>
-        <h2 class="about-title-new">The mind<br>behind<br>the code.</h2>
-
-        <div class="about-meta-list">
-          <div class="about-meta-item">
-            <span class="meta-label-new">NAME</span>
-            <span class="meta-val-new">Raihan Fadilah</span>
-          </div>
-          <div class="about-meta-item">
-            <span class="meta-label-new">LOCATION</span>
-            <span class="meta-val-new">Tangerang Selatan, Banten</span>
-          </div>
-          <div class="about-meta-item">
-            <span class="meta-label-new">EDUCATION</span>
-            <span class="meta-val-new">Telkom University</span>
-          </div>
-          <div class="about-meta-item">
-            <span class="meta-label-new">FOCUS</span>
-            <span class="meta-val-new">Frontend / Web &amp; Mobile</span>
-          </div>
-          <div class="about-meta-item">
-            <span class="meta-label-new">PHONE</span>
-            <span class="meta-val-new">+62-813-1778-7149</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Right Column: Photo, Bio and Skills -->
-      <div class="about-right">
-        <div class="about-img-container">
-          <img src="assets/my.jpg" alt="Raihan Fadilah" class="about-avatar">
-        </div>
-
-        <div class="about-bio-text">
-          <p>Hi, I'm <strong>Raihan Fadilah</strong>, a student at Telkom University majoring in Informatics
-            Engineering. I have experience in website development and major programming languages such as HTML, CSS, and
-            PHP. I am also proficient in using the Laravel framework and Tailwind CSS for responsive and modern designs.
-          </p>
-          <p>I have a strong understanding of MySQL database management. I can help you create various types of websites
-            such as company profiles, inventories, e-commerce, and more — with a combination of technical skills and
-            design creativity.</p>
-        </div>
-
-        <div class="about-skills-new">
-          <h4>SKILLS &amp; ARSENAL</h4>
-          <div class="skill-chips-new">
-            <span class="skill-chip">HTML5</span>
-            <span class="skill-chip">CSS3</span>
-            <span class="skill-chip">Figma</span>
-            <span class="skill-chip">PHP</span>
-            <span class="skill-chip">Laravel</span>
-            <span class="skill-chip">React</span>
-            <span class="skill-chip">Tailwind</span>
-            <span class="skill-chip">MySQL</span>
-            <span class="skill-chip">React Native</span>
-            <span class="skill-chip">Golang</span>
-          </div>
         </div>
       </div>
     </div>
@@ -421,24 +396,112 @@ router.<span class="tok-fn">get</span>(<span class="tok-str">'/api/projects'</sp
     </div>
   </section>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="section-label">Let's Work Together</div>
-    <h2 class="section-title">Have a project in mind?</h2>
-    <p>I'm available for freelance projects, internships, and full-time opportunities. Let's build something great
-      together.</p>
-    <div class="contact-actions">
-      <a href="mailto:raihanfadilah0406@gmail.com" class="btn-white">Send Email</a>
-      <a href="https://wa.me/6281317787149" class="btn-outline-white" target="_blank">WhatsApp Me</a>
-    </div>
-  </section>
+  <!-- FOOTER / CONTACT -->
+  <footer id="contact" class="site-footer">
+    <div class="footer-container">
+      <!-- Upper Footer (3 Columns) -->
+      <div class="footer-grid">
+        <!-- Col 1: Resume -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">Resume</h3>
+          <p class="footer-col-desc">The resume is currently being updated. Please check back later.</p>
+          <button class="footer-btn footer-btn--disabled" disabled aria-disabled="true" title="Resume not available">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="footer-btn-icon">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            <span>Resume unavailable</span>
+          </button>
+        </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="logo">Raihan Fadilah</div>
-    <div>© 2025 Raihan Fadilah. All rights reserved.</div>
-    <div>raihanfadilah0406@gmail.com</div>
+        <!-- Col 2: Direct Mail -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">Direct Mail</h3>
+          <p class="footer-col-desc">Available for collaborations, opportunities, and professional discussions.</p>
+          <a href="mailto:raihanfadilah0406@gmail.com" class="footer-mail-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            <span>raihanfadilah0406@gmail.com</span>
+          </a>
+        </div>
+
+        <!-- Col 3: Connect -->
+        <div class="footer-col">
+          <h3 class="footer-col-title">Connect</h3>
+          <p class="footer-col-desc">Beyond my professional work, I share other interests on social media.</p>
+          <div class="footer-social-icons">
+            <a href="https://github.com/ean06" target="_blank" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+              </svg>
+            </a>
+            <a href="https://linkedin.com/in/raihan-fadilah" target="_blank" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://instagram.com/exturnx_z" target="_blank" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lower Footer Bar -->
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          © 2026 Raihan Fadilah. All rights reserved.
+        </div>
+        <ul class="footer-nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </footer>
+
+  <!-- IMAGE LIGHTBOX MODAL (CODE WINDOW STYLE) -->
+  <div class="img-modal-overlay" id="imgModalOverlay" aria-hidden="true">
+    <div class="img-modal-card code-window">
+      <div class="code-header">
+        <div class="traffic-lights"><span></span><span></span><span></span></div>
+        <div class="code-tabs">
+          <button class="code-tab active" id="modalFileName">experience_preview.jpg</button>
+        </div>
+        <button class="img-modal-close" id="imgModalClose" aria-label="Tutup modal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M18 6L6 18M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div class="img-modal-body">
+        <div class="img-modal-preview-wrap">
+          <img src="" alt="" id="modalImg" class="img-modal-img">
+        </div>
+        <div class="img-modal-info">
+          <div class="img-modal-meta">
+            <span class="img-modal-company" id="modalCompany"></span>
+            <span class="img-modal-year" id="modalYear"></span>
+          </div>
+          <h3 class="img-modal-title" id="modalTitle"></h3>
+          <p class="img-modal-caption" id="modalCaption"></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js" defer></script>
 </body>
