@@ -182,7 +182,7 @@
       { sel: '#experience .exp-header', stagger: 0 },
       { sel: '#experience .exp-item', stagger: 110 },
       { sel: '#portfolio .portfolio-header', stagger: 0 },
-      { sel: '#portfolio .portfolio-card', stagger: 90 },
+      { sel: '#portfolio .project-showcase', stagger: 90 },
       {
         sel: '#contact .section-label, #contact .section-title, #contact p, #contact .contact-actions',
         stagger: 80,
